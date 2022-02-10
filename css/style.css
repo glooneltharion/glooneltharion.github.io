@@ -1,0 +1,194 @@
+ /* GENERAL */
+ 
+ *, *:before, *:after {
+    box-sizing: inherit;
+ }
+
+ html, body {
+    height: 100%;
+ }
+
+ body {
+    padding: 0 10%;
+    margin: 0 auto;
+    background: url(../assets/topography.png);
+    font-family: 'Courier Prime', monospace;
+    font-size: 20px;
+    color: #333;
+  }
+
+  ::-moz-selection{ background:#ff0099 ; color: #000; text-shadow: none; }
+  ::selection{ background: #ff0099; color: #000; text-shadow: none; }
+
+ article, aside, footer, header, main, nav, section {
+  display: block;
+ }
+
+ a {
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+  a:active,
+  a:hover {
+    outline: 0;
+  }
+
+  b, strong {
+    font-weight: bold;
+  }
+
+  i, em {
+	font-style: italic;
+ } 
+
+  h1 {
+    font-size: 3em;
+    margin: 0.8em 0;
+  }
+
+  h2 {
+    font-size: 2em;
+    margin: 0.67em 0;
+  }
+
+  h3 {
+    font-size: 1.3em;
+    margin: 0.37em 0;
+    color: #ff0099;
+  }
+
+  h4 {
+    font-size: 1.25em;
+    margin: 0.57em 0;
+  }
+
+  img {
+    border: 0;
+  }
+
+ /*HEADER*/ 
+
+ .main_header {
+     background: #333;
+     height: 100px;
+     padding: 0 10%;
+     position: fixed;
+	 top: 0;
+	 left: 0;
+	 right: 0;
+     z-index: 1000;
+
+     display: flex;
+     flex-flow: row wrap;
+     justify-content: space-between;
+     align-items: center;
+ }
+
+ .main_header img {
+     width: 75px;
+     height: 75px;;
+ }
+
+ .navigation ul {
+     padding: 0;
+     margin: 0;
+     list-style: none;
+     text-transform: uppercase;
+
+     display: flex;
+     flex-flow: row wrap;
+ }
+
+ .navigation a {
+     text-decoration: underline;
+     font-size: 1.1em;
+     margin: 0 20px;
+     color: #ff0099;
+ }
+
+ .navigation a:hover, .navigation a:focus {
+     color: #fff;
+ }
+
+  /*MAIN*/
+
+  main {
+      padding-top: 150px;
+  }
+
+  main h2 {
+      text-align: center;
+  }
+
+  #wiki:before {
+      content: "---";
+      font-size: 2em;
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+  }
+
+  /*FOOTER*/
+
+ .main_footer a {
+        color: #ff0099;
+      }
+
+.main_footer a:hover, .main_footer a:focus {
+    color: #333;
+}
+
+/* MEDIA QUERIES*/
+
+@media (max-width: 670px) {
+    body {
+       font-size: 16px;
+    }
+
+    .navigation a {
+        font-size: 0.9em;
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 510px) {
+    body {
+        padding: 0 5%;
+    }
+
+    .main_header {
+        padding: 0 5%;
+    }
+}
+
+@media (max-width: 385px) {
+    body {
+        font-size: 14px;
+    }
+    
+    .main_header {
+        flex-direction: column;
+        justify-content: center;
+        height: 120px;
+    }
+
+    .main_header ul {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 300px) {
+    body {
+        font-size: 12px;
+    }
+
+    .navigation a {
+        font-size: 1em;
+    }
+}
+
+
+
