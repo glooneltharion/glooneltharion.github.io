@@ -1,0 +1,194 @@
+/* GENERAL */
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 2%;
+    color: #575757;
+    background: #ebebeb;
+    font-size: 12px;
+    font-family: 'Nunito', sans-serif;
+}
+
+::-moz-selection{ background:#16a085 ; color: #fff; text-shadow: none; }
+::selection{ background: #16a085; color: #fff; text-shadow: none; }
+
+h1 {
+    font-size: 30px;
+    padding: 0;
+    margin: 0;
+    font-weight: 200;
+    color: #000;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/*FORM*/
+
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #FFFFFF;
+
+    border-radius: 4px;
+    width: 40%;
+    padding: 3% 2.5%;
+    margin: 0 auto;
+
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.signup , .social {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.social {
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.circle {
+    display: inline-block;
+    height: 45px;
+    width: 45px;
+    background-color: #dddddd;
+    border-radius: 50%;
+    font-size: 20px;
+    line-height: 45px;
+    text-align: center;
+    margin: auto 5% auto 5%;
+    text-transform: uppercase;
+
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+} 
+
+input, button, .socialbtn {
+    display: block;
+}
+
+input{
+    padding: 25px 0 10px 3px;
+    border: none;
+    border-bottom: 1px solid #aaaaaa;
+    color: #757575;
+    font-weight: 500;
+}
+
+input:focus{
+    outline: none;
+    border-bottom: 2px solid #16a085;
+}
+
+button, .socialbtn {
+    border: 1px solid #fff;
+    background-color: #fff;
+    padding: 10px 0;
+    cursor: pointer;
+
+    font-weight: 500;
+    text-align: center;
+    border-radius: 5px;
+    
+    color: #fff;
+
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+    z-index: 100;
+}
+
+button{
+    width: 130px;
+    margin-top: 50px;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.socialbtn {
+    width: 100%;
+    margin: 10px 0;
+}
+
+button:hover {
+    color: #16a085;
+    border: 1px solid #16a085;
+}
+
+button::before, .socialbtn::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 180%;
+    background: #16a085;
+    transition: 0.8s;
+    border-radius: 50% 50% 0 0;
+    z-index: -1;
+}
+
+button:hover::before, .socialbtn:hover::before{
+    height: 0%;
+}
+
+.fb:hover{
+    color: #32508e;
+    border: 1px solid #32508e;
+}
+
+.twitter:hover {
+    color: #55acee;
+    border: 1px solid #55acee;
+}
+
+.google:hover {
+    color: #dd4b39;
+    border: 1px solid #dd4b39;
+}
+
+.fb::before {
+    background: #32508e;
+}
+
+.twitter::before {
+    background: #55acee;
+}
+
+.google::before {
+    background: #dd4b39;
+}
+
+/* MEDIA QUERIES*/
+
+@media (max-width: 1300px) {
+    form {
+       width: 3.5% 3%;
+    }
+}
+
+@media (max-width: 1000px) {
+    form {
+       width: 70%;
+       padding: 4.5% 4%;
+    }
+}
+
+@media (max-width: 700px) {
+    form {
+       width: 90%;
+       padding: 5.5% 5%;
+    }
+}
