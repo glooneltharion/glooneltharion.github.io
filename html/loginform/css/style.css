@@ -1,0 +1,114 @@
+/* GENERAL */
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 2%;
+    color: #575757;
+    background: #ebebeb;
+    font-size: 12px;
+    font-family: 'Nunito', sans-serif;
+}
+
+::-moz-selection{ background:#789f70 ; color: #000; text-shadow: none; }
+::selection{ background: #789f70; color: #000; text-shadow: none; }
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+a{
+    text-align: right;
+    margin-top: 35px;
+    background-color: transparent;
+    text-decoration: none;
+    color: #808080;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+a:hover{
+    color: #575757;
+}
+
+/*FORM*/
+
+form {
+
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+
+    border-radius: 5px;
+    width: 30%;
+    padding: 2% 5% 2% 5%;
+    margin: 0 auto;
+
+    text-transform: capitalize;
+}
+
+label{
+    text-transform: uppercase;
+    margin: 30px 0 15px 0;
+}
+
+input{
+    padding: 18px;
+    border-radius: 2px;
+    border: 1px solid #D6D9DC;
+    color: #789f70;
+}
+
+input:focus{
+    outline-color: #789f70;
+}
+
+button{
+    border-radius: 25px;
+    color: #FFFFFF;
+    background-color: #333333;
+    padding: 18px;
+    width: 110px;
+    margin: 30px 0 30px 0;
+    border: none;
+    font-size: 15px;
+    text-transform: capitalize;
+}
+
+button:hover {
+  background-color: #575757;
+}
+
+#toggle {
+    margin-top: -31px; 
+    margin-left: 94%;
+    cursor: pointer;
+}
+
+/* MEDIA QUERIES*/
+
+@media (max-width: 1300px) {
+    form {
+       width: 40%;
+    }
+}
+
+@media (max-width: 1000px) {
+    form {
+       width: 60%;
+    }
+}
+
+@media (max-width: 700px) {
+    form {
+       width: 90%;
+    }
+}

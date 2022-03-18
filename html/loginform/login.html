@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Login Form">
+    <meta name="description" content="Login Form">
+    <title>Login Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+<body>
+         
+    <main>
+        <form action="" method="get">
+                
+            <h1>account login</h1>
+        
+            <label for="username">username</label>
+            <input type="text" id="username" autofocus required>
+
+            <label for="password">password</label>
+            <input type="password" id="password" required >
+            <i class="far fa-eye" id="toggle"></i>
+    
+
+            <a href = "index.html">forgot password?</a>
+
+           <button type="submit" >login</button>
+        </form>    
+    
+    </main>
+
+    <script>
+        var toggle = document.querySelector('#toggle');
+        var password = document.querySelector('#password');
+ 
+        toggle.addEventListener('click', function (e) {
+    
+            var type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+    
+            this.classList.toggle('fa-eye-slash');
+        });
+    </script>
+     
+</body>
+</html>
