@@ -8,7 +8,6 @@
 1) Create entity for storing users, which implements [`UserDetails`](https://docs.spring.io/spring-security/site/docs/4.2.3.RELEASE/apidocs/org/springframework/security/core/userdetails/UserDetails.html)`:
     ```java
     @Entity
-    @Getter @Setter
     public class User implements UserDetails {
         ...
         private String username;
@@ -38,7 +37,6 @@
 2) Create entity for users' roles:
     ```java
     @Entity
-    @Getter @Setter
     public class Role {
         @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Long id;
